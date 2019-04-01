@@ -74,5 +74,47 @@ namespace EssentialTraining
             }
             return result;
         }
+
+        public string PrimaryOrSecondaryCompound(string color)
+        {
+            if (color.ToLower() == "red" || color.ToLower() == "green" || color.ToLower() == "blue")
+            {
+                return "Primary";
+            }
+            else
+            {
+                return "Secondary";
+            }
+        }
+        public string GradeLetter(int score)
+        {
+            if(score > 90)
+            {
+                return "A";
+            }
+            else if (score > 79 && score < 90)
+            {
+                return "B";
+            }
+            else if (score > 70 && score <= 80)
+            {
+                return "C";
+            }
+            else
+            {
+                return "F";
+            }
+        }
+        public string IsYourNameNotBruce(string yourName)
+        {
+            if(yourName.ToLower() != "bruce")
+            {
+                return "He's not Bruce...";
+            }
+            else
+            {
+                return "Howdy, Bruce!";
+            }
+        }
     }
 }
