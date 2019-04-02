@@ -15,7 +15,7 @@ namespace EssentialTrainingApp
             Words.Add("Milk");
             Words.Add("Cheese");
 
-
+            ReadTextFile();
         }
 
         private static void ReadTextFile()
@@ -39,6 +39,10 @@ namespace EssentialTrainingApp
             catch(Exception ex)
             {
                 Console.WriteLine("Unknown error occurs: " + ex.Message);
+            }
+            finally
+            {
+                Console.WriteLine("The finally runs all the time.");
             }
         }
     }
