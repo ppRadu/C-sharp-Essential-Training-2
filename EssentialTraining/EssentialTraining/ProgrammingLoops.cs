@@ -63,5 +63,26 @@ namespace EssentialTraining
 
             return sum;
         }
+
+        public string BreakAndContinue()
+        {
+            var sb = new StringBuilder();
+            var words = new List<string>() { "Bread", "Milk", "Eggs", "Cheese", "Apples" };
+
+            foreach(var word in words)
+            {
+                // Continue stops the execution of a particular run of the loop
+                // without disrupting the entire loop
+                if (word.StartsWith("M")) continue;
+
+                // Break exits the loop completely
+                if (word.StartsWith("C")) break;
+            
+
+                sb.AppendLine(word);
+            }
+
+            return sb.ToString();
+        }
     }
 }
