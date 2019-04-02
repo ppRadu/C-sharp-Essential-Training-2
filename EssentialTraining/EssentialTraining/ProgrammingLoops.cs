@@ -32,5 +32,36 @@ namespace EssentialTraining
 
             return sum;
         }
+
+        public int WhileLoop()
+        {
+            var sum = 0;
+            var counter = 0;
+
+            while(counter < 100)
+            {
+                sum += counter;
+                counter++;
+            }
+
+            return sum;
+        }
+
+        public int DoWhileLoop()
+        {
+            var sum = 0;
+            var counter = 0;
+
+            // At least one run through the loop
+            // evan if condition starts out false
+            do
+            {
+                sum += counter;
+                counter++;
+            }
+            while (counter < 100);
+
+            return sum;
+        }
     }
 }
